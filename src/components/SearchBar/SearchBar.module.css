@@ -1,0 +1,9 @@
+.contenedor {
+    display: flex;
+    position: sticky;
+    top:0;
+    background-color: rgb(35, 84, 104) ;
+    padding: 5px;
+    align-items: flex-end;
+    justify-content: flex-end;
+}

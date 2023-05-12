@@ -1,0 +1,6 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+    color: rgb(238, 222, 200);
+}

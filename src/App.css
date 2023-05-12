@@ -1,3 +1,7 @@
 .App {
    text-align: center;
+   opacity: 5;
+   background-image: url("../src/wallpapersden.com_rick-sanchez-in-fortnite-season-7_1920x1080.jpg");
+   background-size: cover;
+   width: 100%;
 }
