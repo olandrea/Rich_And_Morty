@@ -22,8 +22,8 @@ const Favorites = ({myFavorites}) =>{
    return(
        <div>
            <select onChange={handleOrder}>
-               <option value="A">Ascendente</option>
-               <option value="D">Descendente</option>
+               <option value="Ascendente">Ascendente</option>
+               <option value="Descendente">Descendente</option>
            </select>
            <select onChange={handleFilter}>
                <option value="Male">Male</option>
@@ -33,7 +33,7 @@ const Favorites = ({myFavorites}) =>{
            </select>
 
           {
-              myFavorites.map(({ id, name, status, species, gender, origin, image, onClose})=> {
+              myFavorites?.map(({ id, name, status, species, gender, origin, image, onClose})=> {
                   return (
                       <Card
                          key={id}
@@ -60,4 +60,4 @@ const mapStateToProps = (state) => {
    }
 };
 
-export default connect(mapStateToProps,null)(Favorites)
+export default connect(mapStateToProps,null)(Favorites);

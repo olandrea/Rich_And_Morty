@@ -12,4 +12,4 @@ export const filterCards = (gender)=> {
 
 export const orderCards = (order) => {
     return {type: "ORDER", payload: order}
-}
+};
