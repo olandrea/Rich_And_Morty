@@ -1,5 +1,5 @@
 const http = require('http');
-const characters = require('./utils/data');
+const { getCharById } = require('./Controllers/getCharById');
 
 http.createServer((req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -8,10 +8,6 @@ http.createServer((req, res) => {
         //console.log(req.url.split('/').at(-1))
         const id = req.url.split('/').at(-1);
 
-        let charactersFilter = characters.find((char) => char.id === Number(id))
-
-        res.writeHead(200, {'Content-type': 'application/json'}).end(JSON.stringify(charactersFilter))
-
+        getCharById(res, Number(id));
     }
-})
-.listen(3001, "localhost");
+}).listen(3001);
